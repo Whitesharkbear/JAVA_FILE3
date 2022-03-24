@@ -1,17 +1,19 @@
-package ch8;
+package ch9;
 
 public class Add {
-	
-	int add_int(int a, int b) {
-		return a + b;
+	int add(int x, int y) {
+		return x + y;
 	}
 
-	float add_float(float a, float b) {
-		return a + b;
+	float add(float x, float y) {
+		return x + y;
 	}
 
-	String add_string(String a, String b) {
-		return a + b;
+	String add(String x, String y) {
+		return x + y;
 	}
-	
+
+	int add(int x, int y, int z) {
+		return x + y + z;
+	}
 }
