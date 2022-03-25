@@ -1,12 +1,23 @@
-package ch9;
+package ch10;
 
 public class MemberMain {
 
 	public static void main(String[] args) {
-		Member m = new Member();//객체 생성시 생성자 호출.
-		m.print();	//생성자가 실행되면 멤버들은 할당한 값으로 초기화.
-		m.setMemberData("류현진", "010-1111-2222", "로스앤젤레스");
-		m.print();
+		Member m = new Member();
+
+		m.setName("김병만"); // m.name="김병만";
+		m.setTel("5555"); // m.tel="5555";
+		m.setAddress("서울시"); // m.address="서울시";
+//8~10번 줄은 각 멤버의 setter를 호출해서 private 멤버변수에 값 할당.
+	
+		String name = m.getName(); // m.name
+		String tel = m.getTel(); // m.tel
+		String address = m.getAddress(); // m.address
+//13~15번 줄은 멤버의 getter를 호출해서 private 멤버변수의 값을 읽는다.
+		
+		System.out.println("name : " + name);
+		System.out.println("tel : " + tel);
+		System.out.println("address : " + address);
 	}
 
 }
