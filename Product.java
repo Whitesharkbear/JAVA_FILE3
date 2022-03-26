@@ -1,4 +1,4 @@
-package ch7;
+package ch11;
 
 public class Product {
 
