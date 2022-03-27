@@ -1,36 +1,25 @@
-package ch8;
+package ch12;
 
 public class StaticMain {
 
 	public static void main(String[] args) {
-		
-		StaticVar v1 = new StaticVar();
-		System.out.println("v1에서 출력");
-		v1.staticTest();
+		StaticParent sp = new StaticParent();
+		sp.name = "static parent";
+		sp.printInfo();
+		System.out.println("----------------");
 
-		StaticVar v2 = new StaticVar();
-		System.out.println("v2에서 출력");
-		v2.staticTest();
+		StaticChild sc = new StaticChild();
+		sc.name = "static chlid";
+		sc.setAge(10);
+		sc.printInfo();
+		System.out.println("----------------");
 
-		StaticVar v3 = new StaticVar();
-		System.out.println("v3에서 출력");
-		v3.staticTest();
-
-		v1.a = 50;
-		v1.b = 500;
-
-		System.out.println("v1.a=" + v1.a);
-		System.out.println("v1.b=" + v1.b);
-
-		System.out.println("v2.a=" + v2.a);
-		System.out.println("v2.b=" + v2.b);
-
-		System.out.println("v3.a=" + v3.a);
-		System.out.println("v3.b=" + v3.b);
-
-		System.out.println("StaticVar.a=" + StaticVar.a);
-		// System.out.println("StaticVar.b="+StaticVar.b);
-		
+		StaticParent spc = new StaticChild();//업캐스팅으로객체생성
+		spc.name = "UpCasting";
+		spc.printInfo();
+		//StaticChild c = (StaticChild) spc;
+		//c.setAge(20);
+		//c.printInfo();
 	}
 
 }
