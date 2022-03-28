@@ -1,15 +1,12 @@
-package ch11;
+package ch13;
 
-public class GrandParent {
-	protected String name;//protected 멤버변수를 선언.
+public abstract class GrandParent {
+	protected String name;
 	protected int age;
 
-	public GrandParent() { //생성자
-		System.out.println("GrandParent의 생성자");
-	}
+	public abstract void print();//추상메서드
 
-	public void printGrandParentInfo() {
-		System.out.println("name : " + name);
-		System.out.println("age : " + age);
-	}
+	public abstract void test();//추상메서드
 }
+//이 클래스는 추상메서드를 포함하고 있어서
+//추상클래스이며 객체를 생성할수 없다.

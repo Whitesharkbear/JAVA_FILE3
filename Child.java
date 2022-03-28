@@ -1,20 +1,22 @@
-package ch12;
+package ch13;
 
 public class Child extends Parent {
-	private String hobby;
+	public String hobby;
 
-	@Override //재정의 어노테이션으로 컴파일러에 상속받은 메서드를 재정의함을 알려줌
-	public void printInfo() {
-		System.out.println("name : " + name);
-		System.out.println("hobby : " + hobby);
+	@Override
+	public void print() {//parent에서 구현한print를Child에맞게재정의
+		System.out.println("child");
+		System.out.println("name = " + name);
+		System.out.println("age = " + age);
 	}
 
-	public String getHobby() {
-		return hobby;
+	@Override
+	public void test() {//상속받은 추상메서드 test를 구현.
+		System.out.println("hobby = " + hobby);
 	}
 
-	public void setHobby(String hobby) {
-		this.hobby = hobby;
-	}
+	public void parentPrint() {
+		super.print(); //이클래스에서 재정의한 상위클래스의 메서드를 호출
+	} //재정의된 상위클래스의 메서드를 하위 클래스에서 호출하려면super를이용
 
 }
