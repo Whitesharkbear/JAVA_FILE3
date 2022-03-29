@@ -1,23 +1,26 @@
-package ch10;
+package ch14;
+
+class Test2 { //3~6번 줄의 Test2는 toString()을 재정의하지 않은 클래스 샘플.
+	public int x;
+	public int y;
+}
 
 public class MemberMain {
 
 	public static void main(String[] args) {
-		Member m = new Member();
+		System.out.println("toString()을 재정의하지 않은 객체 출력");
+		Test2 t1 = new Test2();
+		System.out.println("t1: " + t1);//toString재정의 하지않아"클래스명@hash code"형태로출력
+		System.out.println("t1.toStrint(): " + t1.toString());//마찬가지로"클래스명@hash code"형태로출력
 
-		m.setName("김병만"); // m.name="김병만";
-		m.setTel("5555"); // m.tel="5555";
-		m.setAddress("서울시"); // m.address="서울시";
-//8~10번 줄은 각 멤버의 setter를 호출해서 private 멤버변수에 값 할당.
+		System.out.println("\ntoString()을 재정의한 객체 출력");
+		Member m1 = new Member("aaa", "111", "서울시");//객체 m1생성.
+		Member m2 = new Member("bbb", "222", "경기도");//객체 m2생성.
+		System.out.println("m1: " + m1);
+		System.out.println("m2: " + m2);
+	//19~20번 줄에서 m1, m2를 출력하는데 member는 toString()을 재정의하였으므로
+	//수정된 코드가 실행. 이 클래스는 멤버 변수값을 재정의해서 각 객체의 name, tel,
+	//address값을 출력한다.
 	
-		String name = m.getName(); // m.name
-		String tel = m.getTel(); // m.tel
-		String address = m.getAddress(); // m.address
-//13~15번 줄은 멤버의 getter를 호출해서 private 멤버변수의 값을 읽는다.
-		
-		System.out.println("name : " + name);
-		System.out.println("tel : " + tel);
-		System.out.println("address : " + address);
 	}
-
 }

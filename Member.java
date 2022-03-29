@@ -1,23 +1,22 @@
-package ch10;
+package ch14;
 
 public class Member {
+	private String name; //멤버변수 name, tel, address를 갖고
+	private String tel; //생성자와 setter, getter로 구성.
+	private String address;
 
-	private String name; //멤버는 모두 private, 보통 클래스의 멤버변수는
-	private String tel;  //private으로 지정해 외부로 정보가 직접
-	private String address; //공개되는 것을 막는다.
-	
-	public void printMember(){//public클래스 밖에서 호출할 수 있다.
-		System.out.println("name : " + name);
-		System.out.println("tel : " + tel);
-		System.out.println("address : " + address);
+	public Member(String name, String tel, String address) {//생성자
+		this.name = name;
+		this.tel = tel;
+		this.address = address;
 	}
 
-	public String getName() { //멤버변수 name의 getter로
-		return name;          //클래스 밖에서 name의 값을 읽을때 호출.
+	public String getName() {
+		return name;
 	}
-	
-	public void setName(String name) {//멤버변수 name의 setter로
-		this.name = name;//클래스 밖에서 넣어준 파라메터 값을name에 할당
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getTel() {
@@ -34,6 +33,11 @@ public class Member {
 
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+	@Override //39~41번은 toString재정의,멤버변수들의 값을 출력하도록 수정.
+	public String toString() {
+		return "name=" + name + ", tel=" + tel + ", address=" + address;
 	}
 
 }
