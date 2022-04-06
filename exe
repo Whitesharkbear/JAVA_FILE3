@@ -1,0 +1,64 @@
+1.제품등록 2.제품검색 3.전체검색 4.수정 5.삭제 6.종료
+3
+oracle selectAll
+Product [num=2, name=BBB, price=1222]
+Product [num=3, name=ccc, price=1300]
+Product [num=21, name=ddd, price=1500]
+Product [num=22, name=eee, price=1600]
+1.제품등록 2.제품검색 3.전체검색 4.수정 5.삭제 6.종료
+1
+제품이름:aaa
+제품가격:1400
+1.제품등록 2.제품검색 3.전체검색 4.수정 5.삭제 6.종료
+3
+oracle selectAll
+Product [num=41, name=aaa, price=1400]
+Product [num=2, name=BBB, price=1222]
+Product [num=3, name=ccc, price=1300]
+Product [num=21, name=ddd, price=1500]
+Product [num=22, name=eee, price=1600]
+1.제품등록 2.제품검색 3.전체검색 4.수정 5.삭제 6.종료
+2
+검색할 제품번호:7
+null
+1.제품등록 2.제품검색 3.전체검색 4.수정 5.삭제 6.종료
+2
+검색할 제품번호:2
+Product [num=2, name=BBB, price=1222]
+1.제품등록 2.제품검색 3.전체검색 4.수정 5.삭제 6.종료
+4
+수정할 제품번호:7
+해당 제품이 없다.
+1.제품등록 2.제품검색 3.전체검색 4.수정 5.삭제 6.종료
+3
+oracle selectAll
+Product [num=41, name=aaa, price=1400]
+Product [num=2, name=BBB, price=1222]
+Product [num=3, name=ccc, price=1300]
+Product [num=21, name=ddd, price=1500]
+Product [num=22, name=eee, price=1600]
+1.제품등록 2.제품검색 3.전체검색 4.수정 5.삭제 6.종료
+4
+수정할 제품번호:2
+Product [num=2, name=BBB, price=1222]
+새 제품이름:bbb
+새 제품가격:1200
+1.제품등록 2.제품검색 3.전체검색 4.수정 5.삭제 6.종료
+2
+검색할 제품번호:2
+Product [num=2, name=bbb, price=1200]
+1.제품등록 2.제품검색 3.전체검색 4.수정 5.삭제 6.종료
+5
+삭제할 제품번호:4
+1.제품등록 2.제품검색 3.전체검색 4.수정 5.삭제 6.종료
+5
+삭제할 제품번호:2
+1.제품등록 2.제품검색 3.전체검색 4.수정 5.삭제 6.종료
+3
+oracle selectAll
+Product [num=41, name=aaa, price=1400]
+Product [num=3, name=ccc, price=1300]
+Product [num=21, name=ddd, price=1500]
+Product [num=22, name=eee, price=1600]
+1.제품등록 2.제품검색 3.전체검색 4.수정 5.삭제 6.종료
+6

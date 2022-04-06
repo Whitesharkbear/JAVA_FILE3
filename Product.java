@@ -1,13 +1,47 @@
-package ch11;
+package ch20.productDb;
 
 public class Product {
+	private int num;
+	private String name;
+	private int price;
 
-	int num; // 力前锅龋
-	String name; // 力前疙
+	public Product() {
+	}
 
-	void print() {
-		System.out.println("num = " + num);
-		System.out.println("name = " + name);
+	public Product(int num, String name, int price) {
+		this.num = num;
+		this.name = name;
+		this.price = price;
+	}
+
+	public int getNum() {
+		return num;
+	}
+
+	public void setNum(int num) {
+		this.num = num;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+	@Override
+	public String toString() {
+		return "Product [num=" + num + ", name=" + name + ", price=" + price
+				+ "]";
 	}
 
 }
